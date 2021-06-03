@@ -26,6 +26,7 @@ model Food {
     updatedAt      DateTime     @updatedAt
     images         FoodImage[]
     ingredients    Ingredient[]
+    // dayFood        DayFood
 }
 
 model FoodImage {
@@ -40,6 +41,13 @@ model Ingredient {
     id          Int    @id @default(autoincrement())
     name        String
     description String
-    food        Food   @relation(fields: [foodId], references: [id])
-    foodId      Int
+    foods       Food[]
+    // food        Food   @relation(fields: [foodId], references: [id])
+    // foodId      Int
 }
+
+// enum DayFood {
+//     Breakfast
+//     Lunch
+//     Dinner
+// }
