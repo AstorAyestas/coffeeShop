@@ -1,0 +1,2 @@
+### test endpoint menu
+GET http://localhost:8080/menu
